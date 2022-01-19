@@ -1,1 +1,1 @@
-# JeonDayeon-Surviver-Of-the-Otome
+#Surviver-Of-the-Otome
