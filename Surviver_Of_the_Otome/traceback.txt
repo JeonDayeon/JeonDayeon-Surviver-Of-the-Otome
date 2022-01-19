@@ -1,0 +1,34 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 8, in script
+    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
+  File "game/script.rpy", line 8, in script
+    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
+  File "game/script.rpy", line 8, in <module>
+    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
+TypeError: 'unicode' object is not callable
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 560, in main
+    renpy.game.context().run(node)
+  File "game/script.rpy", line 8, in script
+    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
+  File "game/script.rpy", line 8, in script
+    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
+  File "renpy/ast.py", line 1027, in execute
+    img = renpy.python.py_eval_bytecode(self.code.bytecode)
+  File "renpy/python.py", line 2269, in py_eval_bytecode
+    return eval(bytecode, globals, locals)
+  File "game/script.rpy", line 8, in <module>
+    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
+TypeError: 'unicode' object is not callable
+
+Windows-10-10.0.19041
+Ren'Py 7.4.11.2266
+Surviver_Of_the_Otome 1.0
+Thu Jan 20 00:58:51 2022
