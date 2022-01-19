@@ -20,7 +20,7 @@ label start:
 
     scene bg_park
 
-    show ehyeon left
+    show ehyeon at left
     e "새로운 렌파이 게임을 만들었군요."
 
     e "이야기와 그림, 음악을 더하면 여러분의 게임을 세상에 배포할 수 있어요!"

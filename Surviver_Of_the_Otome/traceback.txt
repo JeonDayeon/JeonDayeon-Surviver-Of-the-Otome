@@ -1,34 +1,30 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 8, in script
-    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
-  File "game/script.rpy", line 8, in script
-    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
-  File "game/script.rpy", line 8, in <module>
-    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
-TypeError: 'unicode' object is not callable
+  File "game/script.rpy", line 23, in script
+    show ehyeon left
+Exception: Image 'ehyeon' does not accept attributes 'left'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 560, in main
-    renpy.game.context().run(node)
-  File "game/script.rpy", line 8, in script
-    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
-  File "game/script.rpy", line 8, in script
-    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
-  File "renpy/ast.py", line 1027, in execute
-    img = renpy.python.py_eval_bytecode(self.code.bytecode)
-  File "renpy/python.py", line 2269, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/script.rpy", line 8, in <module>
-    image ehyeon = im.FactorScale("images/ehyeon_standing.png"(0.5))
-TypeError: 'unicode' object is not callable
+  File "game/script.rpy", line 23, in script
+    show ehyeon left
+  File "renpy/ast.py", line 1197, in execute
+    show_imspec(self.imspec, atl=getattr(self, "atl", None))
+  File "renpy/ast.py", line 1167, in show_imspec
+    atl=atl)
+  File "renpy/exports.py", line 742, in show
+    if not base.find_target() and renpy.config.missing_show:
+  File "renpy/display/image.py", line 409, in find_target
+    self.target = target._duplicate(a)
+  File "renpy/display/transform.py", line 865, in _duplicate
+    args.extraneous()
+  File "renpy/display/core.py", line 271, in extraneous
+    " ".join(self.args),
+Exception: Image 'ehyeon' does not accept attributes 'left'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Surviver_Of_the_Otome 1.0
-Thu Jan 20 00:58:51 2022
+Thu Jan 20 01:22:55 2022
