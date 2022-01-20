@@ -297,8 +297,8 @@ screen navigation():
         spacing gui.navigation_spacing
 
         if main_menu:
-
-            textbutton _("시작하기") action Start()
+            
+            imagebutton idle "idle.png" hover "hover.png" action Start()
 
         else:
 
