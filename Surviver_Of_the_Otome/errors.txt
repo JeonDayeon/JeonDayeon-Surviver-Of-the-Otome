@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 359: expected a keyword argument or child statement.
-    ("images/title.png")
-    ^
+File "game/screens.rpy", line 410: end of line expected.
+    properties gui.text_properties("version") at right
+                                              ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri Jan 21 01:01:35 2022
+Fri Jan 21 01:22:49 2022

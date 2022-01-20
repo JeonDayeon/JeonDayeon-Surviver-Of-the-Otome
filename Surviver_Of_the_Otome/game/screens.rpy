@@ -291,12 +291,13 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos 300 ypos 550
+        xpos gui.navigation_xpos
+        yalign 0.7
 
         spacing 20
 
         if main_menu:
-            
+            xpos 300 ypos 850
             imagebutton idle "idle.png" hover "hover.png" action Start()
 
         else:
