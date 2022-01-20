@@ -291,10 +291,9 @@ screen navigation():
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        yalign 0.5
+        xpos 300 ypos 550
 
-        spacing gui.navigation_spacing
+        spacing 20
 
         if main_menu:
             
@@ -342,12 +341,15 @@ style navigation_button:
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
 
-
 ## Main Menu 스크린 ###############################################################
 ##
 ## 렌파이가 시작할 때 메인메뉴를 출력합니다.
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#main-menu
+init:
+    image title:
+        "images/title.png"
+        xpos 50 ypos 20
 
 screen main_menu():
 
@@ -358,8 +360,10 @@ screen main_menu():
 
     ## This empty frame darkens the main menu.
     frame:
+        background "#fff0"
         style "main_menu_frame"
 
+    add 'title'
     ## use 명령어로 스크린 내에 다른 스크린을 불러옵니다. 메인 메뉴 스크린의 내
     ## 용물은 navigation 스크린에 있습니다.
     use navigation
@@ -389,7 +393,7 @@ style main_menu_frame:
     background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
-    xalign 1.0
+    xalign 0.5
     xoffset -30
     xmaximum 1200
     yalign 1.0
