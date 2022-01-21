@@ -9,7 +9,7 @@ init offset = -2
 ## gui.init의 호출은 스타일을 합리적인 기본값으로 재설정하고, 게임의 너비(width)
 ## 와 높이(height)를 설정합니다.
 init python:
-    gui.init(1920, 1080)
+    gui.init(1920, 1081)
 
 
 

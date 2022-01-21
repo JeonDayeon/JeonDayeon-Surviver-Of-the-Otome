@@ -13,7 +13,6 @@
 
 define config.name = _("Surviver_Of_the_Otome")
 
-
 ## 위에 주어진 제목이 주 메뉴 화면에 표시되는지 결정합니다. 제목을 숨기려면 이것
 ## 을 False로 설정하십시오.
 

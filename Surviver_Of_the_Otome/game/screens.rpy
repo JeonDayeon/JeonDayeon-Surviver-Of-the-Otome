@@ -287,18 +287,18 @@ style quick_button_text:
 ## 시작/종료할 수 있게 합니다.
 
 screen navigation():
-
+    
     vbox:
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.7
+        yalign 0.5
 
-        spacing 20
+        spacing gui.navigation_spacing
 
         if main_menu:
-            xpos 300 ypos 850
-            imagebutton idle "idle.png" hover "hover.png" action Start()
+
+            textbutton _("시작하기") action Start()
 
         else:
 
@@ -350,7 +350,7 @@ style navigation_button_text:
 init:
     image title:
         "images/title.png"
-        xpos 50 ypos 20
+        xpos 130 ypos 90
 
 screen main_menu():
 
@@ -361,13 +361,38 @@ screen main_menu():
 
     ## This empty frame darkens the main menu.
     frame:
+        xpos 150
+        ypos 600
+
         background "#fff0"
-        style "main_menu_frame"
+
+        vbox:
+
+            spacing 30
+
+            imagebutton:
+                idle "gui/button/idle.png" hover "gui/button/hover.png"
+                action Start()
+
+            imagebutton:
+                idle "gui/button/idle_load.png" hover "gui/button/hover_load.png"
+                action ShowMenu("load")
+
+            imagebutton:
+                idle "gui/button/idle_album.png" hover "gui/button/hover_album.png"
+
+        imagebutton:
+            idle "gui/button/setting.png" hover "gui/button/setting.png"
+            xpos 1680 ypos 400
+            action ShowMenu("preferences")
+
+        
+        
 
     add 'title'
     ## use 명령어로 스크린 내에 다른 스크린을 불러옵니다. 메인 메뉴 스크린의 내
     ## 용물은 navigation 스크린에 있습니다.
-    use navigation
+    
 
     if gui.show_name:
 
