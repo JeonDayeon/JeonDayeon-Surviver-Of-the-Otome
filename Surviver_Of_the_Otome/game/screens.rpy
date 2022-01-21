@@ -360,6 +360,8 @@ screen main_menu():
     add gui.main_menu_background
 
     ## This empty frame darkens the main menu.
+    
+    ##메인화면 구성
     frame:
         xpos 150
         ypos 600
@@ -382,14 +384,12 @@ screen main_menu():
                 idle "gui/button/idle_album.png" hover "gui/button/hover_album.png"
 
         imagebutton:
-            idle "gui/button/setting.png" hover "gui/button/setting.png"
+            idle "gui/button/setting.png" hover "gui/button/hover_setting.png"
             xpos 1680 ypos 400
             action ShowMenu("preferences")
 
-        
-        
-
     add 'title'
+
     ## use 명령어로 스크린 내에 다른 스크린을 불러옵니다. 메인 메뉴 스크린의 내
     ## 용물은 navigation 스크린에 있습니다.
     

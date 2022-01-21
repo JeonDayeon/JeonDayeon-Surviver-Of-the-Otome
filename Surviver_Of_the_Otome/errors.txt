@@ -2,13 +2,10 @@
 errors listed below, and try again.
 
 
-File "game/options.rpy", line 16: expected statement.
-    config.screen_width = 1920
-                        ^
-
-File "game/options.rpy", line 17: expected statement.
-    config.screen_height = 1080
-                         ^
+File "game/script.rpy", line 9: invalid syntax
+    dtime:
+          ^
+    
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri Jan 21 11:26:58 2022
+Fri Jan 21 13:48:54 2022

@@ -4,8 +4,18 @@
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
+init python:
+    day = 0
+    dtime = '낮', '밤'
+
 init:
 
+    screen daytime:
+        frame:
+            hbox:
+                spacing 10
+                text "[day]일째"
+                text "[dtime[0]]"
     image bg_park = ("images/park.jpg")
 
     image ehyeon :
@@ -14,12 +24,12 @@ init:
         xalign 0.0
 
     define e = Character('이현', color="#c8ffc8")
-
 # 여기에서부터 게임이 시작합니다.
 label start:
 
     scene bg_park
 
+    show screen daytime
     show ehyeon at left
     e "새로운 렌파이 게임을 만들었군요."
 
@@ -28,3 +38,5 @@ label start:
     e "깃허브 데스크탑"
 
     return
+
+    
