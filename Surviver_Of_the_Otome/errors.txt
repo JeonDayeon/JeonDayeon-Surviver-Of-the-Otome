@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 19: u'background' is not a keyword argument or valid child for the hbox statement.
-    background "#E50909"
-              ^
+File "game/script.rpy", line 33: expected statement.
+    day += 10 
+        ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Mon Jan 24 13:11:42 2022
+Mon Jan 24 13:27:12 2022
