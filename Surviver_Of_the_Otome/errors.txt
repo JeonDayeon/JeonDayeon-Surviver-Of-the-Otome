@@ -2,10 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 9: invalid syntax
-    dtime:
-          ^
-    
+File "game/script.rpy", line 19: u'background' is not a keyword argument or valid child for the hbox statement.
+    background "#E50909"
+              ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri Jan 21 13:48:54 2022
+Mon Jan 24 13:11:42 2022

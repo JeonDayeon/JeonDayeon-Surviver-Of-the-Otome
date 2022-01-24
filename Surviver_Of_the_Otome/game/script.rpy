@@ -12,6 +12,7 @@ init:
 
     screen daytime:
         frame:
+            xalign 0.5
             hbox:
                 spacing 10
                 text "[day]일째"
@@ -29,7 +30,7 @@ label start:
 
     scene bg_park
 
-    show screen daytime
+    show screen daytime 
     show ehyeon at left
     e "새로운 렌파이 게임을 만들었군요."
 
