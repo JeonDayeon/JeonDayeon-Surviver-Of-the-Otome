@@ -15,6 +15,7 @@ init:
     screen daytime:
         frame:
             xalign 0.5
+            yalign 0.02
             hbox:
                 spacing 10
                 text "[day]일째"
