@@ -9,6 +9,7 @@ init python:
     dtime = '낮'
     i = 0
     ehyeon_love = 0
+    num = 0
 
 init:
 

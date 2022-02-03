@@ -382,6 +382,7 @@ screen main_menu():
 
             imagebutton:
                 idle "gui/button/idle_album.png" hover "gui/button/hover_album.png"
+                action ShowMenu("gallery")
 
         imagebutton:
             idle "gui/button/setting.png" hover "gui/button/hover_setting.png"
@@ -508,8 +509,7 @@ screen game_menu(title, scroll=None, yinitial=0.0):
 
     if main_menu:
         key "game_menu" action ShowMenu("main_menu")
-
-
+ 
 style game_menu_outer_frame is empty
 style game_menu_navigation_frame is empty
 style game_menu_content_frame is empty
@@ -727,7 +727,26 @@ style slot_button:
 style slot_button_text:
     properties gui.button_text_properties("slot_button")
 
+## gallery 스크린 #############################################################
+##
+## cg갤러리 스크린
+##
+## http://baekansi.dothome.co.kr/doc/html/rooms.html
+init python:
+    g = Gallery()
 
+screen gallery():
+    tag menu
+
+    frame:
+        textbutton "돌아가기" action Return() xalign 0.9 yalign 0.9
+        add "ehyeon"
+        imagebutton:
+            idle "gui/button/right_idle.png" hover "gui/button/right_hover.png"
+
+        hbox:
+                text "[day]일째"
+        
 ## Preferences 스크린 #############################################################
 ##
 ## Preferences 스크린에서는 각종 환경설정을 플레이어가 지정할 수 있습니다.
