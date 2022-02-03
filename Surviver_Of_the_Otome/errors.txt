@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 33: expected statement.
-    day += 10 
-        ^
+File "game/screens.rpy", line 747: u'return' is not a keyword argument or valid child for the imagebutton statement.
+    action return(num = num + 1)
+                 ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Mon Jan 24 13:27:12 2022
+Thu Feb  3 13:50:12 2022
