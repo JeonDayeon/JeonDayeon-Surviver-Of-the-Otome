@@ -1,52 +1,36 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "game/screens.rpy", line 738, in prepare_screen
-    screen gallery():
-  File "game/screens.rpy", line 738, in prepare
-    screen gallery():
-  File "game/screens.rpy", line 741, in prepare
-    frame:
-  File "game/screens.rpy", line 741, in prepare
-    frame:
-  File "game/screens.rpy", line 744, in prepare
-    imagebutton:
-  File "game/screens.rpy", line 744, in prepare
-    imagebutton:
-SyntaxError: invalid syntax (screens.rpy, line 746)
+While running game code:
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 662, in main
-    run(restart)
-  File "renpy/main.py", line 97, in run
-    renpy.display.screen.prepare_screens()
-  File "renpy/display/screen.py", line 955, in prepare_screens
-    s.ast.prepare_screen()
-  File "game/screens.rpy", line 738, in prepare_screen
-    screen gallery():
-  File "game/screens.rpy", line 738, in prepare
-    screen gallery():
-  File "game/screens.rpy", line 741, in prepare
-    frame:
-  File "game/screens.rpy", line 741, in prepare
-    frame:
-  File "game/screens.rpy", line 744, in prepare
-    imagebutton:
-  File "game/screens.rpy", line 744, in prepare
-    imagebutton:
-  File "renpy/pyanalysis.py", line 714, in ast_eval
-    return self.ast_eval_literal(expr)[0]
-  File "renpy/pyanalysis.py", line 696, in ast_eval_literal
-    expr = py_compile(expr, 'eval', ast_node=True)
-  File "renpy/python.py", line 835, in py_compile
-    raise e
-SyntaxError: invalid syntax (screens.rpy, line 746)
+  File "renpy/common/00keymap.rpy", line 469, in script
+    python hide:
+  File "renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 469, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 488, in _execute_python_hide
+    renpy.save("_reload-1", "reload save game")
+  File "renpy/loadsave.py", line 394, in save
+    roots = renpy.game.log.freeze(None)
+  File "renpy/python.py", line 2142, in freeze
+    self.complete(False)
+  File "renpy/python.py", line 1726, in complete
+    self.current.stores[name], self.current.delta_ebc[name] = sd.get_changes(begin)
+AttributeError: 'NoneType' object has no attribute 'stores'
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Surviver_Of_the_Otome 1.0
-Thu Feb  3 14:11:10 2022
+Thu Feb  3 22:09:21 2022

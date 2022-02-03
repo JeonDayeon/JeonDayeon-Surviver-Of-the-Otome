@@ -734,18 +734,21 @@ style slot_button_text:
 ## http://baekansi.dothome.co.kr/doc/html/rooms.html
 init python:
     g = Gallery()
+    x = 0;
 
 screen gallery():
     tag menu
 
     frame:
         textbutton "돌아가기" action Return() xalign 0.9 yalign 0.9
-        add "ehyeon"
+
         imagebutton:
             idle "gui/button/right_idle.png" hover "gui/button/right_hover.png"
+            action SetVariable('x', x+1)
+            hovered SetVariable('x', x+1)
 
         hbox:
-                text "[day]일째"
+                text "[x]일째"
         
 ## Preferences 스크린 #############################################################
 ##
