@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 748: u'SetVariable' is not a keyword argument or valid child for the imagebutton statement.
-    hovered Show SetVariable('x', x+1)
-                            ^
+File "game/script.rpy", line 58: u'return' is not a keyword argument or valid child for the imagebutton statement.
+    action return()
+                 ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu Feb  3 22:09:35 2022
+Fri Feb  4 14:51:27 2022

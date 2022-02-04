@@ -742,10 +742,10 @@ screen gallery():
     frame:
         textbutton "돌아가기" action Return() xalign 0.9 yalign 0.9
 
-        imagebutton:
-            idle "gui/button/right_idle.png" hover "gui/button/right_hover.png"
-            action SetVariable('x', x+1)
-            hovered SetVariable('x', x+1)
+##        imagebutton:
+##            idle "gui/button/right_idle.png" hover "gui/button/right_hover.png"
+##            action SetVariable('x', x+1)
+##            hovered SetVariable('x', x+1)
 
         hbox:
                 text "[x]일째"
