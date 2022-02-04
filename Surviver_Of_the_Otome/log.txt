@@ -1,51 +1,66 @@
-Fri Feb  4 14:56:26 2022
+Fri Feb  4 22:53:06 2022
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
  
 
-Bootstrap to the start of init.init took 0.08s
+Bootstrap to the start of init.init took 0.07s
 Early init took 0.00s
 Loader init took 0.01s
-Loading error handling took 0.02s
-Loading script took 0.20s
-Loading save slot metadata. took 0.03s
+Loading error handling took 0.04s
+Loading script took 0.28s
+Loading save slot metadata. took 0.01s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.06s
-Loading analysis data took 0.02s
+Running init code took 0.10s
+Loading analysis data took 0.05s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Administrator\\AppData\\Roaming/RenPy/backups\\Surviver_Of_the_Otome':
-Dump and make backups. took 0.07s
+Backing up script files to 'C:\\Users\\?????\\AppData\\Roaming/RenPy/backups\\Surviver_Of_the_Otome':
+Dump and make backups. took 0.09s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
-Initial gc. took 0.03s
+Initial gc. took 0.02s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: Disabled thread optimizations.
-Creating interface object took 0.32s
+Creating interface object took 0.31s
 Cleaning stores took 0.00s
 Init translation took 0.04s
-Build styles took 0.01s
+Build styles took 0.00s
 Load screen analysis took 0.00s
 Analyze screens took 0.01s
-Save screen analysis took 0.03s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.03s
 Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.13s
+Interface start took 0.29s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
 swap interval: 1 frames
 Windowed mode.
 Vendor: 'NVIDIA Corporation'
-Renderer: 'GeForce GT 710/PCIe/SSE2'
-Version: '4.6.0 NVIDIA 430.64'
+Renderer: 'NVIDIA GeForce RTX 2060/PCIe/SSE2'
+Version: '4.6.0 NVIDIA 496.76'
 Display Info: None
-Screen sizes: virtual=(1920, 1081) physical=(858, 483) drawable=(858, 483)
+Screen sizes: virtual=(1920, 1081) physical=(1737, 978) drawable=(1737, 978)
+Maximum texture size: 4096x4096
+Cleaning stores took 0.00s
+Init translation took 0.00s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.00s
+Prepare screens took 0.00s
+Running _start took 0.00s
+Screen sizes: virtual=(1920, 1081) physical=(1125, 553) drawable=(1125, 553)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1081) physical=(1045, 553) drawable=(1045, 553)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1081) physical=(1011, 553) drawable=(1011, 553)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1081) physical=(992, 553) drawable=(992, 553)
 Maximum texture size: 4096x4096
 Cleaning stores took 0.00s
 Init translation took 0.00s
