@@ -17,6 +17,16 @@ init python:
     ehyeon_love = 0
     num = 0
 
+    ##버튼 입력#################################################################    
+    class GetText(Action):
+        def __init__(self,screen_name,input_id):
+            self.screen_name=screen_name
+            self.input_id=input_id
+        def __call__(self):
+            if renpy.get_widget(self.screen_name,self.input_id):
+                return str(renpy.get_widget(self.screen_name,self.input_id).content)
+    #############################################################################
+
 
 
 
@@ -41,7 +51,7 @@ init:
         yalign 0.0
         xalign 0.0
 
-    screen name_box(title, inputxt):
+    screen name_box(title):
         frame:
             background "#fff0"
             image "gui/selectUI.png"
@@ -52,8 +62,7 @@ init:
             yalign 0.58
             text "[title]"  color '#000000' size 38
             input default :
-                value VariableInputValue("player_name")
-                xalign 0.5 ypos -30 color '#000000'
+                value VariableInputValue("player_name") xalign 0.5 ypos -30 color '#000000'
 
             imagebutton:
                 idle "gui/button/selectButtonOK.png" hover "gui/button/selectButtonOK_hover.png"
@@ -82,14 +91,15 @@ label start:
         
         "싫어":
             e '...'
-            jump room
+            return
 
 label enter_name:
-    $ player_name = renpy.call_screen("name_box", title = "이름을 입력해주세요.", inputxt = "[player_name]")
+    call screen name_box(title = "이름을 입력해주세요.")
 
 
 label meetehyeon:
     e "[player_name]이군요!"
+    e "시 작작 시작"
 
 
 
