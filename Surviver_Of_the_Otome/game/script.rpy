@@ -62,7 +62,9 @@ init:
             yalign 0.58
             text "[title]"  color '#000000' size 38
             input default :
-                value VariableInputValue("player_name") xalign 0.5 ypos -30 color '#000000'
+                value VariableInputValue("player_name")
+                xalign 0.5 ypos -30
+                color '#000000'
 
             imagebutton:
                 idle "gui/button/selectButtonOK.png" hover "gui/button/selectButtonOK_hover.png"
