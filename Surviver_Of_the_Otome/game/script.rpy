@@ -4,6 +4,7 @@
 # image eileen happy = "eileen_happy.png"
 
 # 게임에서 사용할 캐릭터를 정의합니다.
+
 init python:
     ##이름 입력 변수
     player_name='지안'
@@ -27,10 +28,52 @@ init python:
                 return str(renpy.get_widget(self.screen_name,self.input_id).content)
     #############################################################################
 
+    tutorial = False
+    lmap = False
+    location = '공원'
 
 
 
 init:
+## 이미지 ###############################################################
+    image box = "gui/selectUI.png"
+
+    image bg_myroomOn = ("images/myroom_dusk_light_on.png")
+    image bg_park = ("images/park.jpg")
+
+## 캐릭터 이미지 
+    image ehyeon :
+        im.FactorScale("images/ehyeon_standing.png", 0.3)
+        yalign 0.0
+        xalign 0.0
+
+#####################################################################
+
+    screen MapButton:
+        frame:
+            background "#424242"
+            xalign 1.01
+            yalign 0.2
+
+            hbox:
+                imagebutton:
+                    idle ("gui/button/map_idle.png") hover("gui/button/map_hover.png")
+                    action Show ("map")
+
+    screen map:
+        frame:
+            xalign 0.5 yalign 0.5
+            image ("images/glass.png")
+
+        imagebutton:
+            idle("gui/button/school_idle.png") hover ("gui/button/school_hover.png")
+            xalign 0.5
+            yalign 0.3
+            action Jump("School")
+        
+        textbutton "X":
+            action Hide("map")
+            xalign 0.84 yalign 0.17
 
     screen daytime:
         frame:
@@ -40,16 +83,6 @@ init:
                 spacing 10
                 text "[day]일째"
                 text "[dtime]"
-    
-    image box = "gui/selectUI.png"
-
-    image bg_myroomOn = ("images/myroom_dusk_light_on.png")
-    image bg_park = ("images/park.jpg")
-
-    image ehyeon :
-        im.FactorScale("images/ehyeon_standing.png", 0.3)
-        yalign 0.0
-        xalign 0.0
 
     screen name_box(title):
         frame:
@@ -70,15 +103,19 @@ init:
                 idle "gui/button/selectButtonOK.png" hover "gui/button/selectButtonOK_hover.png"
                 action Jump ("meetehyeon")
                 xalign 0.5 ypos -33
-            
+
+## 캐릭터 
     define e = Character('이현', color="#c8ffc8")
+
+
 # 여기에서부터 게임이 시작합니다.
 label start:
 
     $ day += 1 
     scene bg_park
 
-    show screen daytime 
+    show screen daytime
+    show screen MapButton 
     show ehyeon at left
 
     e "새로운 렌파이 게임을 만들었군요."
@@ -102,7 +139,13 @@ label enter_name:
 label meetehyeon:
     e "[player_name]이군요!"
     e "시 작작 시작"
+    e "이제 맵 이동을 해보자 오른쪽 상단에 맵이동을 클릭해봐" 
+    e "맵이 보이지? 학교에 한번 가보자"
 
+label School:
+    if (tutorial == False):
+        e "잘하셨어요!"
+        e "이제 머하지"
 
 
 

@@ -1,54 +1,28 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 97, in script
-    call screen name_box(title = "이름을 입력해주세요.")
-  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-Exception: Required parameter inputxt has no value.
+  File "game/script.rpy", line 114, in script
+    call screen MapButton
+ScriptError: could not find label 'map'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 97, in script
-    call screen name_box(title = "이름을 입력해주세요.")
-  File "renpy/ast.py", line 2015, in execute
-    self.call("execute")
-  File "renpy/ast.py", line 2003, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "renpy/statements.py", line 278, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 569, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "renpy/exports.py", line 3136, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "renpy/ui.py", line 298, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "renpy/display/core.py", line 3325, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
-  File "renpy/display/core.py", line 3737, in interact_core
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/core.py", line 568, in visit_all
-    d.visit_all(callback, seen)
-  File "renpy/display/screen.py", line 436, in visit_all
-    callback(self)
-  File "renpy/display/core.py", line 3737, in <lambda>
-    root_widget.visit_all(lambda i : i.per_interact())
-  File "renpy/display/screen.py", line 447, in per_interact
-    self.update()
-  File "renpy/display/screen.py", line 637, in update
-    self.screen.function(**self.scope)
-  File "renpy/ast.py", line 159, in apply_arguments
-    return parameters.apply(args, kwargs, ignore_errors)
-  File "renpy/ast.py", line 123, in apply
-    raise Exception("Required parameter %s has no value." % name)
-Exception: Required parameter inputxt has no value.
+  File "renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 662, in main
+    run(restart)
+  File "renpy/main.py", line 148, in run
+    renpy.execution.run_context(True)
+  File "renpy/execution.py", line 922, in run_context
+    context.run()
+  File "game/script.rpy", line 114, in script
+    call screen MapButton
+  File "renpy/script.py", line 918, in lookup
+    raise ScriptError("could not find label '%s'." % str(original))
+ScriptError: could not find label 'map'.
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Surviver_Of_the_Otome 1.0
-Fri Feb  4 23:18:44 2022
+Sat Feb  5 22:31:50 2022

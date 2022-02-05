@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 97: end of line expected.
-    call screen name_box title = "이름을 입력해주세요.")
-                         ^
+File "game/script.rpy", line 76: expecting name after dot.
+    xalign 0.84 yalign 0.1.7
+                           ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Fri Feb  4 23:18:19 2022
+Sat Feb  5 22:42:33 2022
