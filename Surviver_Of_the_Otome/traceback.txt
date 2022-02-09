@@ -1,28 +1,40 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 114, in script
-    call screen MapButton
-ScriptError: could not find label 'map'.
+TypeError: 'NoneType' object is not iterable
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/bootstrap.py", line 331, in bootstrap
-    renpy.main.main()
-  File "renpy/main.py", line 662, in main
-    run(restart)
-  File "renpy/main.py", line 148, in run
-    renpy.execution.run_context(True)
-  File "renpy/execution.py", line 922, in run_context
-    context.run()
-  File "game/script.rpy", line 114, in script
-    call screen MapButton
-  File "renpy/script.py", line 918, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'map'.
+  File "renpy/common/_developer/developer.rpym", line 536, in script
+    python hide:
+  File "renpy/ast.py", line 928, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "renpy/python.py", line 2245, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/_developer/developer.rpym", line 536, in <module>
+    python hide:
+  File "renpy/common/_developer/developer.rpym", line 568, in _execute_python_hide
+    ui.interact()
+  File "renpy/ui.py", line 298, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "renpy/display/core.py", line 3325, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs)
+  File "renpy/display/core.py", line 4160, in interact_core
+    rv = root_widget.event(ev, x, y, 0)
+  File "renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "renpy/display/layout.py", line 1102, in event
+    rv = i.event(ev, x - xo, y - yo, cst)
+  File "renpy/common/_developer/developer.rpym", line 481, in event
+    x, y, w, h = self.rectangle()
+  File "renpy/common/_developer/developer.rpym", line 399, in rectangle
+    x1, y1 = self.point1
+TypeError: 'NoneType' object is not iterable
 
 Windows-10-10.0.19041
 Ren'Py 7.4.11.2266
 Surviver_Of_the_Otome 1.0
-Sat Feb  5 22:31:50 2022
+Wed Feb  9 12:05:56 2022
