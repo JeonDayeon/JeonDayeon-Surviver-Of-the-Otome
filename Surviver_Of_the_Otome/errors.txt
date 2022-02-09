@@ -2,9 +2,17 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 73: textbutton expects a non-empty block.
-    textbutton "X":
-                   ^
+File "game/script.rpy", line 154: expected statement.
+    <<<<<<< HEAD
+                ^
+
+File "game/script.rpy", line 156: expected statement.
+    =======
+          ^
+
+File "game/script.rpy", line 159: expected statement.
+    >>>>>>> 0b1eb7aa90d8b0b5bf8cc5ab0ad5cade95bf4c70
+                                                    ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Wed Feb  9 11:54:54 2022
+Thu Feb 10 00:28:26 2022

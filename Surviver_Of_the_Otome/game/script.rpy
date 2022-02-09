@@ -151,12 +151,7 @@ label meetehyeon:
     e "이제 맵 이동을 해보자 오른쪽 상단에 맵이동을 클릭해서 학교에 가봐요" 
 
 label School:
-<<<<<<< HEAD
-    
-=======
     scene bg_school
-
->>>>>>> 0b1eb7aa90d8b0b5bf8cc5ab0ad5cade95bf4c70
     if (tutorial == False):
         show ehyeon at left 
         e "잘하셨어요!"
