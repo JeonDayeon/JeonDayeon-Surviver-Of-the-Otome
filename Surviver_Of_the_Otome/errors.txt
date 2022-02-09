@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 76: expecting name after dot.
-    xalign 0.84 yalign 0.1.7
-                           ^
+File "game/script.rpy", line 73: textbutton expects a non-empty block.
+    textbutton "X":
+                   ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Sat Feb  5 22:42:33 2022
+Wed Feb  9 11:54:54 2022

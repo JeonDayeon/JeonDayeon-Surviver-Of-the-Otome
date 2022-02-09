@@ -40,6 +40,7 @@ init:
 
     image bg_myroomOn = ("images/myroom_dusk_light_on.png")
     image bg_park = ("images/park.jpg")
+    image bg_school = ("images/schoolbg2.png")
 
 ## 캐릭터 이미지 
     image ehyeon :
@@ -55,6 +56,7 @@ init:
 #####################################################################
 
     screen MapButton:
+        modal True
         frame:
             background "#424242"
             xalign 1.01
@@ -68,17 +70,18 @@ init:
     screen map:
         frame:
             xalign 0.5 yalign 0.5
-            image ("images/glass.png")
-
-        imagebutton:
-            idle("gui/button/school_idle.png") hover ("gui/button/school_hover.png")
-            xalign 0.5
-            yalign 0.3
-            action Jump("School")
+            imagemap:
+                ground "images/mapimage.jpg"
+                hover "images/mapimage.jpg"
+                hotspot (295, 19, 480, 335) action Return("School")##학교
+                hotspot (849, 154, 196, 335) ##온실
+                hotspot (642, 387, 181, 189) ##미로
+                hotspot (158, 387, 196, 191) ##매점
+                hotspot (30, 119, 219, 242) ##카페
         
         textbutton "X":
             action Hide("map")
-            xalign 0.84 yalign 0.17
+            xalign 0.99 yalign 0.0
 
     screen daytime:
         frame:
@@ -145,12 +148,17 @@ label enter_name:
 label meetehyeon:
     e "[player_name]이군요!"
     e "시 작작 시작"
-    e "이제 맵 이동을 해보자 오른쪽 상단에 맵이동을 클릭해봐" 
-    e "맵이 보이지? 학교에 한번 가보자"
+    e "이제 맵 이동을 해보자 오른쪽 상단에 맵이동을 클릭해서 학교에 가봐요" 
 
 label School:
+<<<<<<< HEAD
     
+=======
+    scene bg_school
+
+>>>>>>> 0b1eb7aa90d8b0b5bf8cc5ab0ad5cade95bf4c70
     if (tutorial == False):
+        show ehyeon at left 
         e "잘하셨어요!"
         e "이제 머하지"
 
