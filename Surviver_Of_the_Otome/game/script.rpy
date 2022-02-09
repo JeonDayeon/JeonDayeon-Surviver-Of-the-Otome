@@ -47,6 +47,11 @@ init:
         yalign 0.0
         xalign 0.0
 
+    image jihun :
+        im.FactorScale("images/jihun_1.png", 0.35)
+        yalign 0.0
+        xalign 0.0
+
 #####################################################################
 
     screen MapButton:
@@ -106,6 +111,7 @@ init:
 
 ## 캐릭터 
     define e = Character('이현', color="#c8ffc8")
+    define j = Character('배지훈', color = "#ff0000c2")
 
 
 # 여기에서부터 게임이 시작합니다.
@@ -116,13 +122,13 @@ label start:
 
     show screen daytime
     show screen MapButton 
-    show ehyeon at left
+    show jihun at left
 
-    e "새로운 렌파이 게임을 만들었군요."
+    j "새로운 렌파이 게임을 만들었군요."
 
-    e "이야기와 그림, 음악을 더하면 여러분의 게임을 세상에 배포할 수 있어요!"
+    j "이야기와 그림, 음악을 더하면 여러분의 게임을 세상에 배포할 수 있어요!"
 
-    e "이름 알려줄래요?"
+    j "이름 알려줄래요?"
 
     menu:
         "그래":
@@ -143,6 +149,7 @@ label meetehyeon:
     e "맵이 보이지? 학교에 한번 가보자"
 
 label School:
+    
     if (tutorial == False):
         e "잘하셨어요!"
         e "이제 머하지"
