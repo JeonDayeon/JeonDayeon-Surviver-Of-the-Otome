@@ -56,7 +56,6 @@ init:
 #####################################################################
 
     screen MapButton:
-        modal True
         frame:
             background "#424242"
             xalign 1.01
@@ -68,16 +67,16 @@ init:
                     action Show ("map")
 
     screen map:
-        frame:
+        modal True
+        imagemap:
+            ground "images/mapimage.jpg"
+            hover "images/mapimage.jpg"
+            hotspot (596, 4, 723, 504) action Return("School")##학교
+            hotspot (1497, 39, 341, 609) action Return("greenhouse")##온실
+            hotspot (1158, 643, 449, 433) action Return("mazegarden")##미로
+            hotspot (157, 632, 445, 426) action Return("canteen")##매점
+            hotspot (46, 31, 427, 492) action Return("cafe")##카페
             xalign 0.5 yalign 0.5
-            imagemap:
-                ground "images/mapimage.jpg"
-                hover "images/mapimage.jpg"
-                hotspot (295, 19, 480, 335) action Return("School")##학교
-                hotspot (849, 154, 196, 335) ##온실
-                hotspot (642, 387, 181, 189) ##미로
-                hotspot (158, 387, 196, 191) ##매점
-                hotspot (30, 119, 219, 242) ##카페
         
         textbutton "X":
             action Hide("map")
@@ -141,6 +140,8 @@ label start:
             e '...'
             return
 
+    return
+
 label enter_name:
     call screen name_box(title = "이름을 입력해주세요.")
 
@@ -148,16 +149,29 @@ label enter_name:
 label meetehyeon:
     e "[player_name]이군요!"
     e "시 작작 시작"
-    e "이제 맵 이동을 해보자 오른쪽 상단에 맵이동을 클릭해서 학교에 가봐요" 
+    e "이제 맵 이동을 해보자 오른쪽 상단에 맵이동을 클릭해서 학교에 가봐요"
+     
 
 label School:
+    hide screen map
     scene bg_school
     if (tutorial == False):
         show ehyeon at left 
         e "잘하셨어요!"
         e "이제 머하지"
+        return
 
+label greenhouse:
+    j "여기는 온실이야"
 
+label mazegarden:
+    j "여긴 미로정원"
+
+label canteen:
+    j "여기는 매점"
+
+label cafe:
+    j "여기는 카페"
 
 label room:
     $ dtime = '밤'
