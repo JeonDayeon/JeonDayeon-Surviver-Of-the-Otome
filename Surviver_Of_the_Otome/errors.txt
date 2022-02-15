@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 67: u'call' is not a keyword argument or valid child for the imagebutton statement.
-    action call ("map")
-               ^
+File "game/script.rpy", line 74: u'jump' is not a keyword argument or valid child for the hotspot statement.
+    hotspot (596, 4, 723, 504) action jump("School")
+                                          ^
 
 Ren'Py Version: Ren'Py 7.4.11.2266
-Thu Feb 10 14:24:00 2022
+Mon Feb 14 12:09:43 2022

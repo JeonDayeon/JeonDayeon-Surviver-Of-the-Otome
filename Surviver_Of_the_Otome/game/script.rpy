@@ -71,11 +71,11 @@ init:
         imagemap:
             ground "images/mapimage.jpg"
             hover "images/mapimage.jpg"
-            hotspot (596, 4, 723, 504) action Return("School")##학교
-            hotspot (1497, 39, 341, 609) action Return("greenhouse")##온실
-            hotspot (1158, 643, 449, 433) action Return("mazegarden")##미로
-            hotspot (157, 632, 445, 426) action Return("canteen")##매점
-            hotspot (46, 31, 427, 492) action Return("cafe")##카페
+            hotspot (596, 4, 723, 504) action Jump("school")##학교
+            hotspot (1497, 39, 341, 609) action Jump("greenhouse")##온실
+            hotspot (1158, 643, 449, 433) action Jump("mazegarden")##미로
+            hotspot (157, 632, 445, 426) action Jump("canteen")##매점
+            hotspot (46, 31, 427, 492) action Jump("cafe")##카페
             xalign 0.5 yalign 0.5
         
         textbutton "X":
@@ -152,7 +152,7 @@ label meetehyeon:
     e "이제 맵 이동을 해보자 오른쪽 상단에 맵이동을 클릭해서 학교에 가봐요"
      
 
-label School:
+label school:
     hide screen map
     scene bg_school
     if (tutorial == False):
@@ -162,15 +162,19 @@ label School:
         return
 
 label greenhouse:
+    hide screen map
     j "여기는 온실이야"
 
 label mazegarden:
+    hide screen map
     j "여긴 미로정원"
 
 label canteen:
+    hide screen map
     j "여기는 매점"
 
 label cafe:
+    hide screen map
     j "여기는 카페"
 
 label room:
